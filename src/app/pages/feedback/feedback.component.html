@@ -1,0 +1,243 @@
+<!-- 1. FEEDBACK CAROUSEL SECTION -->
+<!-- <section class="carousel-section">
+  <h2 class="section-title">What Our Alumni Say</h2>
+  <div class="carousel">
+    <div class="carousel-track">
+
+      <div class="carousel-card" *ngFor="let fb of feedbacks">
+        <p class="comment">“{{ fb.comment }}”</p>
+        <div class="details">
+          <strong>{{ fb.name }}</strong> - {{ fb.occupation }} ({{ fb.year }})
+        </div>
+      </div>
+    
+      <div class="carousel-card" *ngFor="let fb of feedbacks">
+        <p class="comment">“{{ fb.comment }}”</p>
+        <div class="details">
+          <strong>{{ fb.name }}</strong> - {{ fb.occupation }} ({{ fb.year }})
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section> -->
+
+<section class="feedback-section">
+  <h2 class="section-title">What Our Alumni Say</h2>
+  <div class="feedback-container">
+    
+    <!-- Feedback 1 -->
+    <div class="feedback-card">
+      <div class="feedback-header">
+        <div class="avatar">AK</div>
+        <div class="user-info">
+          <strong>Arjun Kumar</strong>
+          <div class="sub-info">Software Engineer - 2018</div>
+        </div>
+      </div>
+      <p class="comment">“The values and foundation I received here shaped my career and life beyond expectations.”</p>
+    </div>
+
+    <!-- Feedback 2 -->
+    <div class="feedback-card">
+      <div class="feedback-header">
+        <div class="avatar">SR</div>
+        <div class="user-info">
+          <strong>Swathi Ramesh</strong>
+          <div class="sub-info">Architect - 2016</div>
+        </div>
+      </div>
+      <p class="comment">“Wonderful faculty and a great learning environment. Forever grateful!”</p>
+    </div>
+
+    <!-- Feedback 3 -->
+    <div class="feedback-card">
+      <div class="feedback-header">
+        <div class="avatar">MT</div>
+        <div class="user-info">
+          <strong>Manoj Thomas</strong>
+          <div class="sub-info">Entrepreneur - 2015</div>
+        </div>
+      </div>
+      <p class="comment">“The discipline and vision instilled during my time here have been invaluable.”</p>
+    </div>
+
+    <!-- Feedback 4 -->
+    <div class="feedback-card">
+      <div class="feedback-header">
+        <div class="avatar">PK</div>
+        <div class="user-info">
+          <strong>Pooja Krishnan</strong>
+          <div class="sub-info">Data Analyst - 2020</div>
+        </div>
+      </div>
+      <p class="comment">“Supportive teachers and practical exposure made all the difference in my career path.”</p>
+    </div>
+
+    <!-- Feedback 5 -->
+    <div class="feedback-card">
+      <div class="feedback-header">
+        <div class="avatar">VN</div>
+        <div class="user-info">
+          <strong>Vishal Nair</strong>
+          <div class="sub-info">Civil Engineer - 2017</div>
+        </div>
+      </div>
+      <p class="comment">“I made lifelong friendships and gained valuable life skills during my time here.”</p>
+    </div>
+
+    <!-- Feedback 6 -->
+    <div class="feedback-card">
+      <div class="feedback-header">
+        <div class="avatar">RS</div>
+        <div class="user-info">
+          <strong>Ritika Shah</strong>
+          <div class="sub-info">Marketing Manager - 2019</div>
+        </div>
+      </div>
+      <p class="comment">“This school taught me to lead, adapt, and keep learning. Forever thankful!”</p>
+    </div>
+
+    <!-- Feedback 7 -->
+    <div class="feedback-card">
+      <div class="feedback-header">
+        <div class="avatar">AM</div>
+        <div class="user-info">
+          <strong>Abdul Majeed</strong>
+          <div class="sub-info">Mechanical Engineer - 2014</div>
+        </div>
+      </div>
+      <p class="comment">“A place where dreams are nurtured and confidence is built.”</p>
+    </div>
+
+    <!-- Feedback 8 -->
+    <div class="feedback-card">
+      <div class="feedback-header">
+        <div class="avatar">LT</div>
+        <div class="user-info">
+          <strong>Lavanya T</strong>
+          <div class="sub-info">UX Designer - 2021</div>
+        </div>
+      </div>
+      <p class="comment">“Creative, fun, and focused – my time here still guides my decisions today.”</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 2. FEEDBACK FORM SECTION -->
+<section class="form-section">
+  <h2 class="section-title">Leave Your Feedback</h2>
+  <div class="form-card">
+    <form (ngSubmit)="submitFeedback()">
+      <input type="text" placeholder="Your Name" [(ngModel)]="formData.name" name="name" required />
+      <input type="text" placeholder="Passed Out Year" [(ngModel)]="formData.year" name="year" required />
+      <input type="text" placeholder="Occupation" [(ngModel)]="formData.occupation" name="occupation" required />
+      <textarea placeholder="Your Comments" [(ngModel)]="formData.comment" name="comment" required></textarea>
+      <button type="submit">Submit</button>
+      <p class="thank-you" *ngIf="submitted">Thank you for your feedback!</p>
+    </form>
+  </div>
+</section>
+
+<!-- 3. STAFF LIST SECTION -->
+<!-- 👥 Staff List Section -->
+<section class="staff-list-section">
+  <h2 class="staff-title">Our Dedicated Staff</h2>
+
+  <div class="staff-grid">
+    <!-- Column 1 -->
+    <div class="staff-column">
+      <div class="staff-category">
+        <h3>Management</h3>
+        <ul>
+          <li>Most Rev. Dr. Stephan D.D.Ph.D. – Manager</li>
+          <li>Rev Fr. P.H. Antony Douglas M.A.,M.Sc., – Correspondent</li>
+        </ul>
+      </div>
+
+      <div class="staff-category">
+        <h3>Post Graduate Teachers</h3>
+        <ul>
+          <li>Mrs. X. Fatima Shanthi M.A., B.Ed.</li>
+          <li>Mr. G. Anto Vimal Rajesh M.Com., B.Ed., M.Phil.</li>
+          <li>Mr. P. Antony Ranjith Singh M.Com., M.P.Ed., (Dip. in Yoga)</li>
+          <li>Mrs. P. Michael Josephin M.A., B.Ed., M.Phil.</li>
+          <li>Mrs. P. Redemtta M.A., B.Ed., M.L.I.Sc</li>
+          <li>Mrs. A. Joyce Greatta M.Sc., B.Ed.</li>
+          <li>Mrs. T. Vasanthi M.Sc., B.Ed., M.Phil.</li>
+          <li>Mrs. K. Savitha M.A., B.Ed.</li>
+          <li>Mrs. M. Jeyachitra Renilda M.Sc., B.Ed., M.Phil.</li>
+          <li>Mrs. A. Sahaya Priya M.A., B.Ed., M.Phil.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="staff-column">
+      <div class="staff-category">
+        <h3>Headmistress & Asst. Headmasters</h3>
+        <ul>
+          <li>Mrs. I. Mary Freeda M.A., M.Ed. – Head Mistress</li>
+          <li>Mr. G. Antony Nickxon M.A., B.Ed. – Asst. Headmaster</li>
+          <li>Mr. L. Christu Arul Selvan M.A., B.Ed., M.Phil,. – Asst. Headmaster</li>
+        </ul>
+      </div>
+
+      <div class="staff-category">
+        <h3>Vocational Instructors</h3>
+        <ul>
+          <li>Mr. S. Murugan D.E.E.</li>
+          <li>Mr. M. Bevin M.A., M.Phil., D.E.E.</li>
+          <li>Mr. P. Antony Raju M.Sc., M.Ed., M.Phil.</li>
+        </ul>
+      </div>
+
+      <div class="staff-category">
+        <h3>Tamil Pandits</h3>
+        <ul>
+          <li>Mr. M. Soosai Raj M.A., M.Ed., M.Phil.</li>
+          <li>Mrs. S. Chitra M.A., B.Ed.</li>
+          <li>Mrs. S. Jeya Pratha M.A., B.Ed., M.Phil.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="staff-column">
+      <div class="staff-category">
+        <h3>B.T. Assistants</h3>
+        <ul>
+          <li>Mr. A.S.J. Rogesh B.Sc., M.A., M.Ed.</li>
+          <li>Mr. D. Antony Rajan B.Sc., B.Ed.</li>
+          <li>Mrs. Anantha Seeli B.Sc., B.Ed., M.A., M.Phil.</li>
+          <li>Mr. N. Felix Johnson M.A., B.Ed.</li>
+          <li>Mr. J. Maria Arockia Godwin B.Sc., B.Ed., B.P.Ed., M.Sc(Yoga).,</li>
+          <li>Mrs. A. Michael Rosita Arasi B.Sc., B.Ed.,</li>
+          <li>Mrs. J. Mary Sinthiya M.A., B.Ed.,</li>
+          <li>Mrs. V. Stella Mary B.A., B.P.Ed., P.G.D(Yoga)., – P.E.T</li>
+          <li>Mr. G. Livingston Rajan M.A., M.Phil. – Secondary Graduate Teacher</li>
+          <li>Mr. S. Xavier Suresh M.A. – W.W.T.</li>
+          <li>Mr. S. Jadilan B.Sc., B.Ed. – D.T.</li>
+          <li>Mrs. A. Selva Latha  M.Sc., B.Ed.,</li>
+          <li>Mr.M.Jesu Prakash M.sc., B.Ed</li>
+        </ul>
+      </div>
+
+      <div class="staff-category">
+        <h3>Non-Teaching Staff</h3>
+        <ul>
+          <li>Mr. A. Suthagar B.B.A.,– Head Clerk</li>
+          <li>Mr. C. George Milton B.Sc., M.A. – Librarian</li>
+          <li>Mr. K. Subbaiah – Lab Attender</li>
+          <li>Mr. J. Arockiya Arputharaj – Water Man</li>
+          <li>Mr. P. Nerai Arul Selvan – Watch Man</li>
+          <li>Mr. A. Sornappo – Office Assistant</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
