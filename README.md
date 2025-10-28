@@ -57,3 +57,28 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+<!-- Re-Build -->
+
+ng build --configuration production --base-href "/"
+
+cd dist/holyredeemer/browser
+
+# Initialize git (if not already)
+git init
+
+# Add all files including CNAME
+git add .
+
+# Commit
+git commit -m "Deploy Angular app with custom domain"
+
+# Create and switch to gh-pages branch
+git checkout -b gh-pages
+
+# Add remote (if not already added)
+git remote add origin https://github.com/holyredeemers/holyredeemers.git
+
+# Push to gh-pages branch
+git push -u origin gh-pages --force
