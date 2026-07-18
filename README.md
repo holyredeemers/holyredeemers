@@ -82,3 +82,5 @@ git remote add origin https://github.com/holyredeemers/holyredeemers.git
 
 # Push to gh-pages branch
 git push -u origin gh-pages --force
+
+Reconfigure the custom domain in the Github Pages in: Repo/Settings/Pages (note: only can able to configure with repo owner login).
